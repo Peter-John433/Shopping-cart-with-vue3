@@ -1,5 +1,7 @@
 <template>
-    <div class="relative h-[100vh]">
+    <div 
+        :class="{ 'bg-[#0D0D0D]' : darkMode,  'bg-[white]' : !darkMode}"
+        class="relative h-[100vh]">
         <Header />
         <LandingPage />
         
@@ -13,5 +15,11 @@
     import Header from '@/components/Header.vue';
     import LandingPage from '@/components/LandingPage.vue';
     import Social from '@/components/Social.vue';
+    import { usedarkStore } from '@/stores/dark';
+    import { storeToRefs } from 'pinia';
+
+    const darkStore = usedarkStore();
+    const { darkMode } = storeToRefs(darkStore);
+    const { toggleMode } = darkMode;
 
 </script>

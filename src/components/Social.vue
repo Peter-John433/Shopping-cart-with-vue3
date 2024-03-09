@@ -8,13 +8,28 @@
                 text-4xl
             "
         >
-            <div class="bg-[orange]  rounded-full p-1 flex justify-center items-center"><i class='bx bxl-facebook-circle z-10'></i></div>
-            <div class="bg-[orange]  rounded-full p-1 flex justify-center items-center"><i class='bx bxl-twitter' ></i></div>
-            <div class="bg-[orange]  rounded-full p-1 flex justify-center items-center"><i class='bx bxl-whatsapp' ></i></div>
+            
+            <i 
+               :class="{'bg-white' : darkMode, 'bg-[#ffa500]' : !darkMode }"
+               class='bx bxl-facebook-circle rounded-full p-1 flex justify-center items-center'>
+            </i>
+            <i 
+               :class="{'bg-white' : darkMode, 'bg-[#ffa500]' : !darkMode }"
+               class='bx bxl-twitter rounded-full p-1 flex justify-center items-center'>
+            </i>
+            <i 
+               :class="{'bg-white' : darkMode, 'bg-[#ffa500]' : !darkMode }"
+               class='bx bxl-whatsapp rounded-full p-1 flex justify-center items-center'>
+            </i>
         </div>
     </div>
 </template>
 
 <script setup>
+   import { usedarkStore } from '@/stores/dark';
+   import { storeToRefs } from 'pinia';
+
+   const store = usedarkStore();
+   const { darkMode } = storeToRefs(store);
 
 </script>
