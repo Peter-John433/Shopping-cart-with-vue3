@@ -15,13 +15,39 @@
                 "
             >
                 <div 
-                :class="{ 'text-white bg-[skyblue] hover:bg-[#8eddfc]' : darkMode,  'text-white bg-[orange] hover:bg-[#fcbe4c] focus:bg-[orange]' : !darkMode}"
-                class="flex justify-center items-center rounded-full p-1 drop-shadow-md">
-                    <i class='bx bx-menu cursor-pointer' ></i>
+                    :class="{ 'text-white bg-[skyblue] hover:bg-[#8eddfc]' : darkMode,  'text-white bg-[orange] hover:bg-[#fcbe4c] focus:bg-[orange]' : !darkMode}"
+                    class="
+                         flex justify-center items-center 
+                         rounded-full 
+                         p-1 
+                         drop-shadow-md
+                    "
+                >
+                    <i 
+                        class='
+                          bx bx-menu 
+                          cursor-pointer
+                          '
+                     ></i>
                 </div>
-                <div @click="toggleMode">
-                    <i v-if="darkMode" class='bx bx-moon text-white cursor-pointer dark' ></i>
-                    <i v-else class='bx bx-moon text-[orange] cursor-pointer dark' ></i>
+                <div 
+                    @click="toggleMode"
+                >
+                    <i 
+                        v-if="darkMode" 
+                        class='
+                            bx bx-moon 
+                            text-white 
+                            cursor-pointer dark'
+                         ></i>
+                    <i 
+                        v-else 
+                        class='
+                           bx bx-moon 
+                           text-[orange] 
+                           cursor-pointer 
+                           dark' 
+                    ></i>
                 </div>
             </div>
         </div>
